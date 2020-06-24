@@ -26,11 +26,6 @@ app.get("/quotes/random", function (request, response) {
     pickFromArray(quotes))
 });
 
-// app.get("/quotes/search", function (request, response) {
-//   const search = request.query.search
-//   response.json(quotes.filter(e => e.quote.includes(search)))
-// })
-
 app.get("/quotes/search", function (request, response) {
   const term = request.query.term
   response.json(quotes.filter(e => e.quote.includes(term)))
