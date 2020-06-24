@@ -22,8 +22,7 @@ app.get("/quotes", function (request, response) {
 });
 
 app.get("/quotes/random", function (request, response) {
-  response.send(
-    pickFromArray(quotes))
+  response.json(pickFromArray(quotes))
 });
 
 app.get("/quotes/search", function (request, response) {
